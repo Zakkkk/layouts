@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Opal Keyboard Layout</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="hero">
+            <div class="keyboard">
+                <div class="main-board">
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key">b</div>
+                            <div class="key">f</div>
+                            <div class="key">✳</div>
+                            <div class="key">p</div>
+                            <div class="key">w</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key">'</div>
+                            <div class="key">.</div>
+                            <div class="key">u</div>
+                            <div class="key">o</div>
+                            <div class="key">y</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key">n</div>
+                            <div class="key">s</div>
+                            <div class="key">t</div>
+                            <div class="key">d</div>
+                            <div class="key">g</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key">k</div>
+                            <div class="key">r</div>
+                            <div class="key">e</div>
+                            <div class="key">a</div>
+                            <div class="key">i</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key">q</div>
+                            <div class="key">v</div>
+                            <div class="key">c</div>
+                            <div class="key">m</div>
+                            <div class="key">x</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key">l</div>
+                            <div class="key">h</div>
+                            <div class="key">,</div>
+                            <div class="key">z</div>
+                            <div class="key">j</div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="thumbs"></div>-->
+            </div>
+        </div>
+        <article>
+            <h1>Introducing Opal</h1>
+            <p>
+                Opal is an optimised keyboard layout using a
+                <a href="https://layouts.wiki/reference/terminology/magic/"
+                    >magic key</a
+                >
+                and
+                <a
+                    href="https://dario.ca/posts/2026-05-18-keyboard-layout-adaptive-swaps/"
+                    >adaptive swaps</a
+                >. There is also a version of Opal which has the letter
+                <code>E</code> on the thumb, called
+                <a href="#opaline">Opaline</a>.
+            </p>
+            <h2>Philosophy</h2>
+            <p>
+                From my experience with Sturdy, and from aggregated typing data
+                from fast typists I concluded the folowing:
+            </p>
+            <ul>
+                <li>
+                    Double letters (SKB - same key bigrams) are the same speed
+                    as same finger bigrams (SFB), so they should be treated the
+                    same and be optimised for.
+                </li>
+                <li>
+                    Some scissors are as slow as SFB, especially half scissors
+                    such as <code>pr</code> on Sturdy.
+                </li>
+                <li>
+                    Roll direction does not seem to have a significant impact on
+                    speed, so you should not make sacrifices in order to have
+                    the roll direction be in any particular direction.
+                </li>
+                <li>
+                    Whilst some redirects are horrible, some feel fine and even
+                    feel good. Opal and Opaline especially aim to reduce any
+                    redirects not involving the index or thumb. No types of
+                    redirects were rewarded in the creation process since the
+                    amount of nice feeling redirects are relatively infrequent.
+                </li>
+                <li>
+                    High movement index fingers do not feel nice. Instead of the
+                    6 index moderate usage keys on the left index on Sturdy,
+                    Opal has 5, and Opaline has 4.
+                </li>
+                <li>
+                    Trigram alternation patterns, can be slow and innacurate. I
+                    think generally less alternations are better, but
+                    alternations can be useful in breaking up long one handed
+                    sequences. Rolls are strongly preferred to alternations.
+                </li>
+                <li>
+                    Row staggered keyboards have certain advantages, namely
+                    superior index keys: QWERTY <code>N</code> and
+                    <code>M</code> are equidistant to the home row keys, and the
+                    middle finger on the left hand has nicer keys. The ideal
+                    keyboard layout should take advantage of this. I strongly
+                    recommend reading
+                    <a
+                        href="https://www.reddit.com/r/ErgoMechKeyboards/comments/1cgcvjn/comment/l1vur9t/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                        >Stronglytyped's take on this</a
+                    >.
+                </li>
+            </ul>
+            <p>
+                The inspiration for designing Opal is largely based on my
+                experience of
+                <a href="https://oxey.dev/layouts/sturdy">Sturdy</a>, which I've
+                gotten up to 179wpm on a 60s test over the last two years of
+                usage. Like Sturdy, Opal is high in rolls, but without the left
+                index movement, and scissors which have come to bother me when
+                typing fast.
+            </p>
+            <p>
+                One thing that separates Opal and Opaline from other layouts is
+                that they place a great importance on not only scissors but also
+                skip scissors, i.e. scissors separated by one key. Furthermore,
+                the scissor definition is more unique than what other analysers
+                use, and penalises half scissors like QWERTY
+                <code>uk</code> (though less). I found that when typing fast,
+                your hands will adapt to scissor motions by having your hand
+                complete the bigram in a motion, rather than just relying on
+                your fingers. This hand movement isn't very comfortable but more
+                imporantly is very slow. This layout was designed with the help
+                of an analyser I wrote called
+                <a href="https://codeberg.org/Zakkkk/mana2">Mana2</a>
+                which generated most of the layout.
+            </p>
+            <p>
+                Opal is primarily designed for every day usage, and secondarily
+                optimised for the default Monkeytype word list; e200. Opal
+                relatively undeperfoms on quotes due to the overrepresentation
+                of punctuation, which means the right index will have more same
+                finger usage. You could modify the layout to fix this, but it
+                comes at certain costs that I don't know are worth it or not
+                yet.
+            </p>
+            <p>
+                With these in mind, I set off to make a layout which had a
+                generally good assortment of stats and minimal glaring issues. I
+                also wanted to have the <code>nstd</code> homerow, because I
+                liked the types of layouts I had seen previously with this home
+                row. I also decided to use the Reddit corpus as much of our
+                daily usage involves this casual dialogue. The punctuation
+                choices are also far more realistic compared to what you may
+                find in books or quotes.
+            </p>
+            <h2 id="opaline">Opaline</h2>
+            <div class="keyboard keyboard-split keyboard-smaller">
+                <div class="main-board">
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key key-pinky">b</div>
+                            <div class="key key-ring">f</div>
+                            <div class="key key-middle">✳</div>
+                            <div class="key key-middle">p</div>
+                            <div class="key key-index">j</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key key-index">'</div>
+                            <div class="key key-index">,</div>
+                            <div class="key key-middle">u</div>
+                            <div class="key key-ring">o</div>
+                            <div class="key key-pinky">y</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key key-pinky">n</div>
+                            <div class="key key-ring">s</div>
+                            <div class="key key-middle">t</div>
+                            <div class="key key-index">d</div>
+                            <div class="key key-index">w</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key key-index">k</div>
+                            <div class="key key-index">r</div>
+                            <div class="key key-middle">i</div>
+                            <div class="key key-ring">a</div>
+                            <div class="key key-pinky">h</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key key-pinky">q</div>
+                            <div class="key key-ring">v</div>
+                            <div class="key key-index">c</div>
+                            <div class="key key-index">g</div>
+                            <div class="key key-index">x</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key key-index">m</div>
+                            <div class="key key-index">l</div>
+                            <div class="key key-middle">.</div>
+                            <div class="key key-ring">;</div>
+                            <div class="key key-pinky">z</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <div class="key key-thumb thumb-left">_</div>
+                    <div class="key key-thumb thumb-right">e</div>
+                </div>
+            </div>
+            <br />
+            <p>
+                Opaline is the thumb alpha version of Opal. By moving the
+                <code>E</code> to the thumb, we can move the <code>I</code> to
+                the old <code>E</code> position, and put the <code>H</code> in
+                the old <code>I</code> position. This frees up space on the
+                right index, meaning we can put the <code>M</code> on the right
+                index finger, reducing the movement on the left index. After
+                these swaps, some magic rules are added to clean up any bad
+                patterns introduced.
+            </p>
+            <p>
+                As a result from these rearrangements, Opaline scores better on
+                same finger usage, scissors, and stretches. Also as a result of
+                the
+                <code>H</code> pinky Opaline scores particularly high on inward
+                rolls on the vowel hand.
+            </p>
+            <p>
+                One drawback of having <code>E</code> on the thumb, is that the
+                pattern <code>e_e</code> is overrepresented in e200, and some
+                may not like the same finger usage on the thumb. In everyday
+                typing, the thumb SFS is less than that of the space.
+            </p>
+            <p>
+                Opaline works best on an Alice keyboard, which features a split
+                space. However, it is certainly possible to use a thumb alpha
+                layout on a regular keyboard. You just need to
+                <a href="https://colemakmods.github.io/ergonomic-mods/wide.html"
+                    >wide mod</a
+                >
+                the right side, then use your right command/alt key for the
+                thumb key.
+            </p>
+            <h2>Statistics</h2>
+            <p>
+                All statistics are with the
+                <a
+                    href="https://convokit.cornell.edu/documentation/reddit-small.html"
+                    >Reddit corpus</a
+                >.
+            </p>
+
+            <h3>Opal Statistics</h3>
+
+            <!-- Ok fine the tables were AI generated, i couldn't be bothered making them myself. -->
+            <div class="stats-group">
+                <section class="stats-panel">
+                    <div class="stats-table stats-table--first">
+                        <div class="stat-column-title-row">
+                            <div
+                                class="stat-column-title stat-column-title-label"
+                            >
+                                Stat
+                            </div>
+                            <div class="stat-column-title">Bigram</div>
+                            <div class="stat-column-title">Skipgram</div>
+                            <div class="stat-column-title-rule"></div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label">Same finger</div>
+                            <div class="stat-value">0.595%%</div>
+                            <div class="stat-value">3.967%</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-label">Same key</div>
+                            <div class="stat-value">0.303%</div>
+                            <div class="stat-value">2.969%</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-label">Stretch</div>
+                            <div class="stat-value">2.120</div>
+                            <div class="stat-value">4.249</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-label">Scissor</div>
+                            <div class="stat-value">1.712</div>
+                            <div class="stat-value">5.042</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="stats-panel">
+                    <div class="stats-table">
+                        <div class="stat-column-title-row">
+                            <div
+                                class="stat-column-title stat-column-title-label"
+                            >
+                                Stat
+                            </div>
+                            <div class="stat-column-title">All</div>
+                            <div class="stat-column-title">No thumbs</div>
+                            <div class="stat-column-title-rule"></div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label">Alternation</div>
+                            <div class="stat-value">28.651%</div>
+                            <div class="stat-value">16.339%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Alt &amp; SFS</div>
+                            <div class="stat-value">4.309%</div>
+                            <div class="stat-value">3.026%</div>
+                        </div>
+
+                        <div class="stat-spacer-row">
+                            <div class="stat-spacer-cell"></div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label">Redirect total</div>
+                            <div class="stat-value">9.087%</div>
+                            <div class="stat-value">3.290%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Red &amp; SFS</div>
+                            <div class="stat-value">2.608%</div>
+                            <div class="stat-value">1.331%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Weak</div>
+                            <div class="stat-value">0.120%</div>
+                            <div class="stat-value">0.120%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Weak &amp; SFS</div>
+                            <div class="stat-value">0.056%</div>
+                            <div class="stat-value">0.056%</div>
+                        </div>
+
+                        <div class="stat-spacer-row">
+                            <div class="stat-spacer-cell"></div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label">Roll total</div>
+                            <div class="stat-value">60.498%</div>
+                            <div class="stat-value">26.734%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Inroll2</div>
+                            <div class="stat-value">25.884%</div>
+                            <div class="stat-value">12.949%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Outroll2</div>
+                            <div class="stat-value">31.050%</div>
+                            <div class="stat-value">12.165%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Inroll3</div>
+                            <div class="stat-value">2.982%</div>
+                            <div class="stat-value">1.021%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Outroll3</div>
+                            <div class="stat-value">0.621%</div>
+                            <div class="stat-value">0.584%</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <h3>Opaline Statistics</h3>
+
+            <div class="stats-group">
+                <section class="stats-panel">
+                    <div class="stats-table stats-table--first">
+                        <div class="stat-column-title-row">
+                            <div
+                                class="stat-column-title stat-column-title-label"
+                            >
+                                Stat
+                            </div>
+                            <div class="stat-column-title">Bigram</div>
+                            <div class="stat-column-title">Skipgram</div>
+                            <div class="stat-column-title-rule"></div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label">Same finger</div>
+                            <div class="stat-value">0.429%</div>
+                            <div class="stat-value">3.160%</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-label">Same key</div>
+                            <div class="stat-value">0.309%</div>
+                            <div class="stat-value">2.964%</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-label">Stretch</div>
+                            <div class="stat-value">1.600</div>
+                            <div class="stat-value">3.607</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-label">Scissor</div>
+                            <div class="stat-value">1.353</div>
+                            <div class="stat-value">3.923</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="stats-panel">
+                    <div class="stats-table">
+                        <div class="stat-column-title-row">
+                            <div
+                                class="stat-column-title stat-column-title-label"
+                            >
+                                Stat
+                            </div>
+                            <div class="stat-column-title">All</div>
+                            <div class="stat-column-title">No thumbs</div>
+                            <div class="stat-column-title-rule"></div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label">Alternation</div>
+                            <div class="stat-value">26.755%</div>
+                            <div class="stat-value">9.768%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Alt &amp; SFS</div>
+                            <div class="stat-value">3.629%</div>
+                            <div class="stat-value">1.760%</div>
+                        </div>
+
+                        <div class="stat-spacer-row">
+                            <div class="stat-spacer-cell"></div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label">Redirect total</div>
+                            <div class="stat-value">9.194%</div>
+                            <div class="stat-value">1.876%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Red &amp; SFS</div>
+                            <div class="stat-value">2.484%</div>
+                            <div class="stat-value">0.855%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Weak</div>
+                            <div class="stat-value">0.173%</div>
+                            <div class="stat-value">0.173%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Weak &amp; SFS</div>
+                            <div class="stat-value">0.099%</div>
+                            <div class="stat-value">0.099%</div>
+                        </div>
+
+                        <div class="stat-spacer-row">
+                            <div class="stat-spacer-cell"></div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label">Roll total</div>
+                            <div class="stat-value">62.591%</div>
+                            <div class="stat-value">18.919%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Inroll2</div>
+                            <div class="stat-value">32.956%</div>
+                            <div class="stat-value">12.331%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Outroll2</div>
+                            <div class="stat-value">25.077%</div>
+                            <div class="stat-value">5.333%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Inroll3</div>
+                            <div class="stat-value">3.985%</div>
+                            <div class="stat-value">1.147%</div>
+                        </div>
+                        <div class="stat-row stat-row-child">
+                            <div class="stat-label">Outroll3</div>
+                            <div class="stat-value">0.573%</div>
+                            <div class="stat-value">0.109%</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <p>
+                The stretches and scissors have unique definitions to Mana2 so
+                they are not comparable to other analysers' results. So I will
+                also give the percentiles of the stats in comparison to all the
+                layouts in the AKL database.
+            </p>
+
+            <p>Opal:</p>
+
+            <ul>
+                <li>Scissors: 3rd percentile</li>
+                <li>Skip Scissors: 11th percentile</li>
+                <li>Stretches: 19th percentile</li>
+                <li>Skip Stretches: 43rd percentile</li>
+            </ul>
+
+            <p>Opaline:</p>
+
+            <ul>
+                <li>Scissors: 1st percentile</li>
+                <li>Skip Scissors: 2nd percentile</li>
+                <li>Stretches: 8th percentile</li>
+                <li>Skip Stretches: 26th percentile</li>
+            </ul>
+
+            <p>
+                You can see the distributions for the other stats on akl.gg for
+                <a href="https://akl.gg/#.gwTUAGcGAQCkb3BhbA">Opal</a>
+                and also
+                <a href="https://akl.gg/#.gwTUAGcGAQCnb3BhbGluZQ">Opaline</a>.
+            </p>
+
+            <p>
+                Whilst Opaline does feature generally better statistics, one
+                stark difference is that due to thumb <code>E</code> on Opaline,
+                it features far less rolls not involving the thumbs. Since the
+                main fingers are physically closer to eachother it is easier to
+                coordinate and execute the non thumb rolls. Though with that
+                said, Opaline still does feel distinctly rolly in my experience.
+            </p>
+
+            <p>
+                With some alt fingering around the index and middle fingers, the
+                repeats are less than 0.1%, with the only substantial repeat
+                being <code>rr</code>, and the SFB and SFS also being slightly
+                lower.
+            </p>
+
+            <h2>Testimonials</h2>
+            <p>Coming soon!</p>
+            <h2>Usage Guide</h2>
+            <p>
+                As previously mentioned, Opal takes advantage of the row
+                staggered keyboard by utilising Nokwts fingering:
+            </p>
+            <div class="keyboard keyboard-smaller keyboard-split">
+                <div class="main-board">
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key key-pinky">b</div>
+                            <div class="key key-ring">f</div>
+                            <div class="key key-middle">✳</div>
+                            <div class="key key-middle">p</div>
+                            <div class="key key-index">w</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key key-index">'</div>
+                            <div class="key key-index">.</div>
+                            <div class="key key-middle">u</div>
+                            <div class="key key-ring">o</div>
+                            <div class="key key-pinky">y</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key key-pinky">n</div>
+                            <div class="key key-ring">s</div>
+                            <div class="key key-middle">t</div>
+                            <div class="key key-index">d</div>
+                            <div class="key key-index">g</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key key-index">k</div>
+                            <div class="key key-index">r</div>
+                            <div class="key key-middle">e</div>
+                            <div class="key key-ring">a</div>
+                            <div class="key key-pinky">i</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-hand">
+                            <div class="key key-pinky">q</div>
+                            <div class="key key-ring">v</div>
+                            <div class="key key-index">c</div>
+                            <div class="key key-index">m</div>
+                            <div class="key key-index">x</div>
+                        </div>
+                        <div class="right-hand">
+                            <div class="key key-index">l</div>
+                            <div class="key key-index">h</div>
+                            <div class="key key-middle">,</div>
+                            <div class="key key-ring">z</div>
+                            <div class="key key-pinky">j</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <p>
+                With this fingermap, the middle finger on the left side controls
+                the keys <code>T</code>, <code>P</code>, and the magic key. The
+                benefit of this fingermap is that it allows the middle finger to
+                control a region of the board, rather than an arbitrary column.
+                You should also use your left thumb for the space key on this
+                layout. This enables more rolls on your thumb, and less
+                alternations and redirects.
+            </p>
+            <p>Some other recommendations for the layout:</p>
+            <ul>
+                <li>
+                    I would strongly recommend having the
+                    <code>?</code> on the base layer, and then the
+                    <code>/</code> on the shift layer. The question mark is a
+                    relatively common character, and is far more common than the
+                    <code>/</code> character. This works well on the QWERTY
+                    <code>'</code> position, just right of the
+                    <code>I</code> key on Opal. You could also have the
+                    <code>"</code> key there, separated from the
+                    <code>'</code> key, however, this has less usage in quotes,
+                    whereas the question mark is relatively frequent in both
+                    quotes and every day typing, and you would need to find a
+                    place to fit the rest of the keys without pushing too many
+                    keys off to the edges.
+                </li>
+                <li>
+                    <code>control+backspace</code> on the capslock key. As you
+                    get faster, it'll be more efficient to delete a whole word
+                    and retype it quickly, instead of partially backspacing and
+                    using weaker muscle memory to complete the word. Usually
+                    this would involve holding down the control key and then
+                    reaching for the backspace key, but the capslock key is far
+                    easier to reach. If you still want the ability to turn on
+                    caps lock, you can have <code>control+capslock</code> turn
+                    it on.
+                </li>
+                <li>
+                    Sticky shift. This means that you only need to tap the shift
+                    key once, and do not need to hold it in order to capitalise
+                    a key. This is far easier to coordinate at higher speeds,
+                    though you can still hold the shift if you wish.
+                </li>
+            </ul>
+            <h3>Magic Rules</h3>
+            <blockquote>
+                You can always find the up to date magic rules on
+                <a href="https://akl.gg/">akl.gg</a>.
+            </blockquote>
+            <p>
+                This layout uses a magic key as well as adaptive swaps in order
+                to improve comfort. A magic key is a key whose output will
+                change depending on whichever key preceded it. So for example to
+                type the word <code>say</code>, you would use the magic key and
+                type <code>sa✳</code>, avoiding the uncomfortable
+                <code>ay</code> half scissor. Another example would be with
+                typing the word <code>need</code>, you would type it as
+                <code>ne✳d</code>, avoiding the slow <code>ee</code> repeat.
+            </p>
+            <p>The magic rules for Opal are:</p>
+            <ul>
+                <li><code>'r</code></li>
+                <li><code>ay</code></li>
+                <li><code>hr</code></li>
+                <li><code>ik</code></li>
+                <li><code>jo</code></li>
+                <li><code>ke</code></li>
+                <li><code>rl</code></li>
+                <li><code>u'</code></li>
+                <li><code>ye</code></li>
+                <li>else repeat</li>
+            </ul>
+
+            <p>
+                Opal also will use adaptive swaps in addition to the magic key.
+                For example one of the adaptive swaps Opal has is
+                <code>u e/o</code>, which means that after the
+                <code>U</code> key is pressed, the <code>E</code> and
+                <code>O</code> keys will swap their positions. So to type
+                <code>guest</code>, you would instead type <code>guost</code>,
+                and to type <code>quote</code>, you would instead type
+                <code>quete</code>. This lets the more common sequences be the
+                comfortable rolls, and the uncommon sequences the SFBs.
+            </p>
+
+            <p>The adaptive swaps for Opal are:</p>
+            <ul>
+                <li><code>' l/f</code></li>
+                <li><code>j n/u</code></li>
+                <li><code>u e/o</code></li>
+                <li><code>y ,/u</code></li>
+            </ul>
+
+            <p>And for Opaline, the rules and swaps are:</p>
+
+            <ul>
+                <li><code>'m</code></li>
+                <li><code>ay</code></li>
+                <li><code>hy</code></li>
+                <li><code>ik</code></li>
+                <li><code>rl</code></li>
+                <li><code>u'</code></li>
+                <li><code>y.</code></li>
+                <li><code>zy</code></li>
+                <li>else repeat</li>
+                <li><code>' l/f</code></li>
+                <li><code>e y/u</code></li>
+                <li><code>l k/n</code></li>
+                <li><code>r k/h</code></li>
+                <li><code>u i/o</code></li>
+            </ul>
+
+            <p>
+                Usually in the discussions around magic layouts, there is a
+                concern over a 'cognitive overhead' when typing. The idea is
+                that due to the amount and complexity of the magic rules, your
+                typing will be slowed down by thought rather than muscle memory
+                for physical ability. In my opinion and experience, this concern
+                is unfounded and completely overblown. Much like alt fingerings,
+                picking up the various magic rules is simple and becomes pure
+                muscle memory by a certain point, meaning that you do not need
+                to think about how to type a particular sequence. This initial
+                learning process is also very easy in my and others' experience
+                in learning Opal.
+            </p>
+
+            <h3>Alt Fingerings</h3>
+
+            <p>
+                It's a good idea to alt finger as much as you can. Some
+                sequences that are definitely recommended are:
+            </p>
+
+            <ul>
+                <li><code>tt</code></li>
+                <li><code>✳p</code></li>
+                <li><code>p✳</code></li>
+                <li><code>e,</code></li>
+            </ul>
+
+            <p>
+                Additionally, you will find words where you can alt away an SFS,
+                for example in the word <code>too</code>. In some words like
+                "keep", it will be better to not use the <code>ke</code> magic
+                rule, so that you can instead get rid of the SKB by typing
+                <code>ke✳p</code>.
+            </p>
+
+            <h2>Modifications</h2>
+            <h3>e200 Focused</h3>
+
+            <p>
+                The problem on e200 for Opal is the <code>rk</code> sfb in the
+                word "work". This is altable, but it doesn't feel great, and
+                maybe worth tanking. We can't add an <code>rk</code> magic rule
+                since its being taken up by the <code>rl</code> magic rule. And
+                we can't replace the <code>rl</code> rule with the
+                <code>rk</code> because then you have the word "early" which
+                isn't altable due to your fingers on the vowels right before.
+            </p>
+            <p>
+                However there is a solution to this. If we replace the
+                <code>ay</code> magic rule with an <code>ar</code> magic rule,
+                we can then replace <code>rl</code> with <code>rk</code>, and
+                now "early" is typed as <code>ea✳ly</code>, and we can now alt
+                the <code>rl</code> in words like "world" comfortably. The draw
+                back of this is that you now get the <code>ay</code> scissor,
+                which in my opinion isn't worth it. Though if you are willing to
+                tank some comfort for speed I would highly recommend this.
+            </p>
+
+            <h2>Installation</h2>
+            <p>
+                See the
+                <a href="https://layouts.wiki/guides/start/software/"
+                    >layouts wiki guide</a
+                >
+                on installing a custom layout.
+            </p>
+            <p>
+                I recommend using
+                <a href="https://github.com/jtroo/kanata">Kanata</a>, with
+                <a
+                    href="https://github.com/zachpoblete/kanata-guide-for-alt-layouts"
+                    >Nova's Kanata Guide</a
+                >.
+                <!--Here is a basic Opal Kanata file, and Opaline Kanata file.-->
+            </p>
+            <h2>Frequently Asked Questions</h2>
+            <h3>How should I learn the layout?</h3>
+            <p>
+                I would recommend learning the magic rules as you go, most of
+                the time the magic rule will be obvious as the non magic route
+                is uncomfortable. The adaptive swaps will be trivial to learn as
+                you are forced to use them. Besides this I would recommend
+                learning a layout as you would normally, consider checking out
+                <a
+                    href="https://typing.zakventer.com/#practice-for-the-beginner"
+                    >"Practise for the beginner" from my typing guide</a
+                >.
+            </p>
+        </article>
+    </body>
+</html>

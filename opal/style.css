@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --unit: clamp(18px, 7cqw, 48px);
+}
+
+@media (max-width: 730px) {
+    :root {
+        --unit: clamp(18px, 7cqw, 40px);
+    }
+}
+
+.keyboard-smaller {
+    --unit: clamp(14px, 7cqw, 36px);
+}
+
+body {
+    font-family: "Bricolage Grotesque", "sans-serif";
+    background: #292d3e;
+    color: #f0f0f0;
+    /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect x='0' y='0' width='30' height='60' fill='%23c9a227' fill-opacity='0.03'%3E%3C/rect%3E%3C/svg%3E");*/
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cline x1='0' y1='20' x2='20' y2='0' stroke='%23c9a227' stroke-width='0.75' stroke-opacity='0.15'/%3E%3Cline x1='0' y1='0' x2='20' y2='20' stroke='%23c9a227' stroke-width='0.75' stroke-opacity='0.15'/%3E%3C/svg%3E");
+    /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cline x1='10' y1='0' x2='10' y2='40' stroke='%23c9a227' stroke-width='1' stroke-opacity='0.2'/%3E%3Cline x1='14' y1='0' x2='14' y2='40' stroke='%23c9a227' stroke-width='1' stroke-opacity='0.2'/%3E%3C/svg%3E");*/
+    background-repeat: repeat;
+
+    scroll-behavior: smooth;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--unit) * 0.5);
+    width: fit-content;
+
+    .key {
+        font-family: "Ubuntu";
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(var(--unit) * 1);
+        height: calc(var(--unit) * 1);
+        background: #292d3e;
+        box-shadow: inset 0 calc(var(--unit) * 0.1) 10px 10px #202330;
+        border-radius: 4px;
+        line-height: 0;
+        text-transform: uppercase;
+        font-size: calc(var(--unit) * 0.4);
+        border: 1px solid rgb(51, 55, 72);
+        user-select: none;
+        color: #fff;
+
+        &.key-pinky,
+        &.key-ring,
+        &.key-middle,
+        &.key-index,
+        &.key-thumb {
+            border-width: 0px;
+            box-shadow: none;
+            color: #000;
+        }
+
+        &.key-pinky {
+            background-color: #81f0f9;
+        }
+
+        &.key-ring {
+            background-color: #ffe0b2;
+        }
+
+        &.key-middle {
+            background-color: #2596be;
+        }
+
+        &.key-index {
+            background-color: #5fc898;
+        }
+
+        &.key-thumb {
+            background-color: #c8845f;
+        }
+    }
+
+    .main-board {
+        /* All the gaps are 0.2, which means the offset will include these */
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--unit) * 0.2);
+
+        .row {
+            display: flex;
+            gap: calc(var(--unit) * 0.2);
+
+            > * {
+                display: flex;
+                gap: calc(var(--unit) * 0.2);
+            }
+
+            &:nth-child(2) {
+                padding-left: calc(var(--unit) * 0.35);
+            }
+
+            &:nth-child(3) {
+                padding-left: calc(var(--unit) * 0.95);
+            }
+        }
+    }
+
+    &.keyboard-split {
+        .main-board {
+            .row {
+                gap: calc(var(--unit) * 1);
+            }
+        }
+    }
+
+    .thumb {
+        padding-top: calc(var(--unit) * 0.3);
+        display: flex;
+
+        /*.thumb-left {
+            margin-left: calc(var(--unit) * 2.15);
+        }
+
+        .thumb-right {
+            margin-left: calc(var(--unit) * 7.15);
+        }*/
+
+        > .key {
+            width: calc(var(--unit) * 1.75);
+        }
+    }
+
+    &.keyboard-split {
+        .thumb {
+            .thumb-left {
+                margin-left: calc(var(--unit) * 3.75);
+            }
+
+            .thumb-right {
+                margin-left: calc(var(--unit) * 2.25);
+            }
+        }
+    }
+}
+
+#hero {
+    height: 45vh;
+    min-height: 300px;
+    @media (max-width: 530px) {
+        height: 30vh;
+    }
+    /*background: repeating-linear-gradient(
+        195deg,
+        #2596be,
+        #ffe0b2,
+        #81f0f9,
+        #f9bbd0,
+        #e4f2fd
+    );*/
+    background:
+        radial-gradient(ellipse at top, #81f0f9, #ffe0b2, #f9bbd0),
+        radial-gradient(ellipse at bottom, #f9bbd0, #2596be);
+    padding-bottom: 40px;
+    container-type: inline-size;
+    border-bottom: 2px ridge #202330;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .keyboard {
+        background: rgba(51, 55, 72, 0.3);
+        backdrop-filter: invert(80%);
+        /*background: rgba(255, 255, 255, 0.3);*/
+        /*box-shadow: inset 0 calc(var(--unit) * 0.1) 40px 5px #202330;*/
+        border-radius: 10px;
+    }
+}
+
+article {
+    width: 90%;
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+    container-type: inline-size;
+    top: -40px;
+    padding: 40px;
+    background: #202330;
+    font-size: 1.05rem;
+
+    @media (max-width: 530px) {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .keyboard {
+        background: rgba(51, 55, 72, 1);
+        margin-bottom: 1.3rem;
+        border-radius: 10px;
+    }
+}
+
+article .keyboard {
+    margin: 0 auto;
+}
+
+a {
+    color: #81f0f9;
+}
+
+code {
+    font-family: "Ubuntu Mono";
+    /*font-size: 1.1rem;*/
+    background: #333;
+    /*font-weight: 600;*/
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &:hover a::after {
+        content: "#";
+        margin-left: 10px;
+    }
+
+    a {
+        color: var(--fg);
+        text-decoration: none;
+        display: block;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Fraunces;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1,
+.h1 {
+    font-size: 2.35rem;
+    line-height: 2.6rem;
+    margin-top: 1.3rem;
+    margin-bottom: 2.6rem;
+}
+h2,
+.h2 {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+h3,
+.h3 {
+    font-size: 1.35rem;
+    line-height: 2rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+h4,
+.h4 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0rem;
+}
+h5,
+.h5 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0rem;
+}
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+    margin-top: 0rem;
+    margin-bottom: 1.3rem;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+ul li {
+    list-style-type: square;
+}
+
+ul,
+ol {
+    line-height: 1.6;
+}
+
+p,
+li {
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+blockquote {
+    margin: 20px 0;
+    border-radius: 8px;
+    padding: 12px;
+    background: rgba(51, 55, 72, 1);
+}
+
+.stats-group {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.stats-panel {
+    margin-bottom: 20px;
+}
+
+.stats-table {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    column-gap: 16px;
+    font-size: 1.1rem;
+    @media (max-width: 400px) {
+        font-size: 1rem;
+    }
+    padding: 10px 0;
+    border-top: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.stats-table--first {
+    border-bottom: none;
+}
+
+.stat-column-title-row,
+.stat-row,
+.stat-spacer-row {
+    display: contents;
+}
+
+.stat-column-title {
+    font-weight: 600;
+    text-align: right;
+    padding: 0 0 8px;
+    white-space: nowrap;
+}
+
+.stat-column-title-label {
+    text-align: left;
+}
+
+.stat-column-title-rule {
+    grid-column: 1 / -1;
+    border-top: 2px solid #f0f0f0;
+}
+
+.stat-label {
+    padding: 6px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.stat-value {
+    font-family: "Ubuntu Mono";
+    padding: 6px 0;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.stat-row-child .stat-label {
+    padding-left: 20px;
+}
+
+.stat-spacer-cell {
+    grid-column: 1 / -1;
+    height: 6px;
+}
